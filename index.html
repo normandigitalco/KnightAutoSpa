@@ -1176,6 +1176,8 @@ var _bgIO=('IntersectionObserver' in window)?new IntersectionObserver(function(e
 function playVisible(v){if(v.offsetParent!==null)v.play().catch(function(){});}
 function registerBgVideo(v){
  _bgVideos.push(v);
+ // if the first play() was blocked or came too early, try again as soon as the browser has data
+ ['loadeddata','canplay'].forEach(function(t){v.addEventListener(t,function(){if(v.paused&&document.visibilityState==='visible')playVisible(v);});});
  if(_bgIO)_bgIO.observe(v);else playVisible(v);
 }
 (function(){
