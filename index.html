@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>history.scrollRestoration='manual';</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Knight AutoSpa | Mobile Auto Detailing - Fulshear &amp; Katy, TX</title>
+<meta name="description" content="Mobile auto detailing in Fulshear and Katy, TX. Paint correction, ceramic coatings, and full interior and exterior details brought to your door. Call or text 832-609-5261."/>
+<meta name="robots" content="index, follow"/>
+<!-- TODO(Hazel): swap knightautospa.com for the real domain once confirmed (canonical, og:url, schema url) -->
+<link rel="canonical" href="https://knightautospa.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://knightautospa.com/"/>
+<meta property="og:title" content="Knight AutoSpa | Mobile Auto Detailing - Fulshear &amp; Katy, TX"/>
+<meta property="og:description" content="Where your car gets treated like royalty. Paint correction, ceramic coatings, and full details at your door in Fulshear and Katy, TX."/>
+<meta property="og:image" content="https://knightautospa.com/img/knight-og-share.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Knight AutoSpa logo: a gold knight helmet above a black sports car"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://knightautospa.com/img/knight-og-share.jpg"/>
+<!-- TODO(Hazel): add real hours to the schema once the client confirms them - left out rather than guessed -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutomotiveBusiness","name":"Knight AutoSpa","description":"Mobile auto detailing in Fulshear and Katy, TX. Paint correction, ceramic coatings, and interior and exterior details.","url":"https://knightautospa.com","telephone":"+18326095261","sameAs":["https://www.instagram.com/knight_autospaa/"],"areaServed":[{"@type":"City","name":"Fulshear"},{"@type":"City","name":"Katy"}]}
+</script>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+<link rel="preload" as="image" href="img/knight-logo.webp"/>
+<link rel="preload" as="image" href="img/knight-hero-3-poster.webp" media="(min-width:881px)"/>
+<link rel="preload" as="image" href="img/knight-hero-mobile-3-poster.webp" media="(max-width:880px)"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<!-- Type pulled from the logo: KNIGHT is a flared, chiseled roman capital (Cinzel Black is the closest match); AUTOSPA is a clean, wide-tracked geometric sans (Montserrat) -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script>
+(function(){
+ function setVh(){document.documentElement.style.setProperty('--vh',(window.innerHeight*0.01)+'px');}
+ setVh();
+ window.addEventListener('orientationchange',function(){setTimeout(setVh,400);},{passive:true});
+})();
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+ /* Palette sampled from the Knight AutoSpa logo: polished gold (highlight #FFE070 down to shadow #9D7720),
+    brushed silver helmet, black field. Neutrals are tinted warm toward the gold rather than pure grey/white. */
+ --y:#E3B92A;
+ --yh:#FFE070;
+ --yd:#7A5C0E;
+ --yline:rgba(227,185,42,0.28);
+ --bg:#0a0908;
+ --panel:#14120e;
+ --panel2:#1b1812;
+ --w:#f6f1e6;
+ --w2:#eee7d6;
+ --td:#0f0d09;
+ --tm:#3d372b;
+ --ts:#6b6250;
+ --text:#f3eee2;
+ --text2:rgba(243,238,226,0.84);
+ --muted:rgba(243,238,226,0.52);
+ --line:rgba(255,255,255,0.09);
+ --line2:rgba(255,255,255,0.16);
+ --lined:rgba(15,13,9,0.12);
+ --nav-h:100px;
+ --pad:clamp(20px,5vw,56px);
+ --H:'Cinzel',serif;
+ --U:'Montserrat',sans-serif;
+ --B:'Montserrat',sans-serif;
+ --ease:cubic-bezier(.23,1,.32,1);
+ --rad:3px;
+}
+html{scroll-behavior:auto;scrollbar-gutter:stable both-edges}
+body{background:var(--bg);color:var(--text);font-family:var(--B);font-weight:400;line-height:1.65;overflow-x:hidden;overscroll-behavior-y:auto;-webkit-overflow-scrolling:touch}
+a,button,[onclick]{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:inherit}
+::selection{background:var(--y);color:#0a0908}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--y)}
+
+/* PAGE */
+.page{display:none;opacity:0;width:100%}
+.page.active{display:block}
+.page.visible{opacity:1;transition:opacity .22s ease}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);padding:0 clamp(20px,4vw,48px);background:transparent;border-bottom:1px solid transparent;transition:background .25s ease,border-color .25s ease}
+.nav-inner{position:relative;display:grid;grid-template-columns:minmax(200px,1fr) auto minmax(200px,1fr);align-items:center;column-gap:clamp(16px,2.5vw,40px);height:100%}
+nav.scrolled{background:rgba(10,9,8,0.97);border-bottom-color:var(--line)}
+nav.menu-open{background:transparent!important;border-bottom-color:transparent!important}
+.nav-logo{cursor:pointer;display:flex;align-items:center;flex-shrink:0;justify-self:start}
+.nav-logo-img{height:92px;width:auto;object-fit:contain}
+.nav-links{grid-column:2;justify-self:center;display:flex;align-items:center;gap:clamp(14px,2vw,32px);min-width:0}
+.nav-links a{font-family:var(--U);font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--text);cursor:pointer;position:relative;padding-bottom:3px;transition:color .2s ease}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--y);transition:width .25s var(--ease)}
+.nav-links a.on{color:var(--y)}
+.nav-links a.on::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:14px;flex-shrink:0;justify-self:end}
+@media(min-width:881px){nav{padding:0 clamp(48px,10vw,220px)}}
+.nav-phone{display:flex;align-items:center;gap:7px;color:var(--text2);transition:color .2s ease}
+.nav-phone span{font-family:var(--U);font-weight:700;font-size:13px;letter-spacing:.3px;white-space:nowrap;font-variant-numeric:lining-nums tabular-nums}
+.nav-ig{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:3px;border:1px solid var(--line2);transition:border-color .2s ease,color .2s ease;color:var(--text2)}
+.nav-ig svg{width:17px;height:17px;fill:currentColor}
+.nav-book{font-family:var(--U);font-weight:800;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap;padding:13px 22px;background:var(--y);color:#0a0908;border:none;cursor:pointer;border-radius:3px;transition:background .2s ease,transform .15s ease}
+.nav-book:active,.btn-y:active,.f-submit:active{transform:scale(0.97)}
+.nav-call{display:none;align-items:center;justify-content:center;height:42px;padding:0 20px;background:var(--y);color:#0a0908;font-family:var(--U);font-weight:800;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;border-radius:3px;transition:transform .15s ease}
+.nav-call:active{transform:scale(0.96)}
+.ham{display:none;flex-direction:column;align-items:flex-end;gap:6px;cursor:pointer;padding:11px 12px;background:rgba(255,255,255,0.05);border:1px solid var(--line2);border-radius:3px}
+.ham span{height:2px;background:var(--text);display:block;border-radius:2px;width:24px;transition:transform .25s var(--ease),opacity .2s ease}
+.ham.open{align-items:center}
+.ham.open span{width:22px}
+.ham.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* MOBILE MENU */
+.mob{display:none;position:fixed;inset:0;background:#0a0908;z-index:999;flex-direction:column;align-items:center;justify-content:center;padding:var(--nav-h) 24px 48px}
+.mob.open{display:flex}
+.mob-x{position:absolute;top:22px;right:24px;background:none;border:none;color:rgba(243,238,226,0.45);cursor:pointer;line-height:1;padding:8px;transition:color .2s ease}
+.mob-links{display:flex;flex-direction:column;align-items:stretch;margin-bottom:40px;width:100%;max-width:340px}
+.mob-links a{font-family:var(--H);font-weight:800;font-size:clamp(1.3rem,5.5vw,1.7rem);letter-spacing:2px;text-transform:uppercase;color:var(--text);cursor:pointer;padding:16px 0;text-align:center;display:block;border-bottom:1px solid rgba(243,238,226,0.14)}
+.mob-links a:first-child{border-top:1px solid rgba(243,238,226,0.14)}
+.mob-links a:active{color:var(--y)}
+.mob-bottom{display:flex;flex-direction:column;align-items:center;gap:16px;width:100%;max-width:300px}
+.mob-book{font-family:var(--U);font-weight:800;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#0a0908;background:var(--y);padding:17px;border-radius:4px;border:none;cursor:pointer;width:100%;text-align:center;display:block}
+.mob-ig{font-family:var(--U);font-weight:600;font-size:13px;letter-spacing:1px;color:rgba(243,238,226,0.75)}
+
+/* ICON UTILS */
+.soc-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+
+/* BUTTONS */
+.btn-y{font-family:var(--U);font-weight:800;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;padding:15px 34px;background:var(--y);color:#0a0908;border:none;cursor:pointer;border-radius:3px;transition:background .2s ease,transform .15s ease;display:inline-block;text-align:center}
+.btn-o{font-family:var(--U);font-weight:800;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;padding:14px 34px;background:transparent;border:1px solid rgba(243,238,226,0.4);color:var(--text);cursor:pointer;border-radius:3px;transition:border-color .2s ease,color .2s ease;display:inline-block;text-align:center}
+.btn-dark{font-family:var(--U);font-weight:800;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;padding:15px 34px;background:var(--td);color:#fff;border:none;cursor:pointer;border-radius:3px;transition:background .2s ease,transform .15s ease;display:inline-block}
+
+/* HERO - portrait footage: framed on desktop over a blurred still, full-bleed on mobile */
+.hero{position:relative;min-height:calc(var(--vh,1vh)*100);overflow:hidden;contain:paint;display:flex;align-items:center;justify-content:center;background:var(--bg);text-align:center}
+.hero-bg{position:absolute;inset:0;z-index:1;overflow:hidden}
+.hero-bg video{width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;display:block}
+.hero-ov{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(10,9,8,.5) 0%,rgba(10,9,8,.26) 45%,rgba(10,9,8,.6) 100%)}
+.hero-content{position:relative;z-index:10;padding:calc(var(--nav-h) + 8px) var(--pad) 72px;display:flex;flex-direction:column;align-items:center;max-width:820px;width:100%}
+.hero-logo{width:min(clamp(210px,23vw,320px),33vh);height:auto;margin:0 0 20px;filter:drop-shadow(0 10px 28px rgba(0,0,0,0.6))}
+.hero-tagline{font-family:var(--H);font-weight:700;font-size:clamp(1.7rem,3.5vw,3.05rem);text-transform:uppercase;letter-spacing:.03em;line-height:1.14;color:var(--w);margin:0 auto 18px;text-shadow:0 3px 22px rgba(0,0,0,0.6)}
+.hero-sub{font-family:var(--B);font-weight:600;font-size:clamp(13px,1.25vw,16px);letter-spacing:.05em;color:var(--w);white-space:nowrap;margin:0 auto 32px;text-shadow:0 2px 14px rgba(0,0,0,0.6)}
+.hero-sub .dot{color:var(--y);margin:0 .7em}
+.hero-loc{font-family:var(--U);font-weight:700;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--yh);margin:0 auto 32px;text-shadow:0 2px 12px rgba(0,0,0,0.6)}
+.hero-btns{display:flex;justify-content:center}
+@media(min-width:1000px){.hero-btns .btn-y{padding:16px 38px;font-size:12.5px}}
+
+/* SECTION SHARED */
+.sec{padding:clamp(60px,9vw,100px) var(--pad)}
+.sec-inner{max-width:1200px;margin:auto}
+.sec-h{font-family:var(--H);font-weight:800;font-size:clamp(1.7rem,3.8vw,3.1rem);line-height:1.08;text-transform:uppercase;letter-spacing:.01em;color:var(--text);margin-bottom:14px}
+.sec-h.dark{color:var(--td)}
+.sec-h:not(.dark){background:linear-gradient(180deg,#fff4cf 0%,#ffe070 38%,#E3B92A 66%,#a67c16 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#E3B92A;filter:drop-shadow(0 2px 10px rgba(0,0,0,.45))}
+.sec-sub{font-size:15px;color:var(--text2);max-width:520px;line-height:1.8}
+.sec-sub.dark{color:var(--tm)}
+
+/* HOME "WHAT WE DO" - image cards */
+.home-svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:clamp(32px,4vw,48px)}
+.home-svc-card{position:relative;display:flex;flex-direction:column;border-radius:var(--rad);overflow:hidden;cursor:pointer;background:#110f0b;border:1px solid rgba(255,255,255,.08)}
+.home-svc-img{position:relative;aspect-ratio:4/3.3;overflow:hidden;flex-shrink:0}
+.home-svc-img img{width:100%;height:100%;object-fit:cover;object-position:50% var(--py,96%);transition:transform .5s var(--ease)}
+.home-svc-cap{position:relative;flex:1;z-index:2;padding:20px 20px 22px;border-top:2px solid var(--y)}
+.home-svc-cap h3{font-family:var(--H);font-weight:800;font-size:1.08rem;letter-spacing:.02em;text-transform:uppercase;color:#fff;margin-bottom:8px;line-height:1.15}
+.home-svc-cap p{font-size:13px;color:rgba(255,255,255,0.86);line-height:1.65}
+.home-svc-link{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-family:var(--U);font-weight:800;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--y)}
+.home-svc-link svg{width:12px;height:12px;transition:transform .2s var(--ease)}
+@media(max-width:1000px){.home-svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:881px) and (max-width:1540px){.nav-phone{display:none}}
+@media(max-width:560px){.home-svc-grid{grid-template-columns:1fr}.home-svc-img{aspect-ratio:4/3}}
+
+/* CLIPS - "Some details we've done" muted looping vehicle videos */
+.clips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:clamp(28px,4vw,44px)}
+.clip-item{position:relative;border-radius:var(--rad);overflow:hidden;aspect-ratio:3/4;background:var(--panel);isolation:isolate}
+.clip-item video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;background:var(--panel)}
+.clip-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 65%,rgba(0,0,0,.5) 100%);pointer-events:none}
+.clip-name{position:absolute;left:14px;bottom:12px;z-index:2;font-family:var(--U);font-weight:700;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#fff}
+@media(max-width:880px){
+ .clips-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+ .clip-name{left:10px;bottom:9px;font-size:10px;letter-spacing:1.2px}
+}
+
+/* ABOUT rows */
+.about-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center}
+.about-split-img{min-height:480px;position:relative}
+.about-split-text{display:flex;flex-direction:column;justify-content:center;padding:clamp(8px,2vw,24px) 0}
+.about-row{display:flex;align-items:stretch;min-height:clamp(460px,62vh,720px)}
+.about-row.reverse{flex-direction:row-reverse}
+.about-row-img{flex:0 1 50%;position:relative;overflow:hidden;min-height:340px}
+.about-row-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about-row-text{flex:0 1 50%;display:flex;flex-direction:column;justify-content:center;padding:clamp(40px,6vw,88px)}
+.about-row-h{font-family:var(--H);font-weight:800;font-size:clamp(1.55rem,2.7vw,2.3rem);text-transform:uppercase;letter-spacing:.01em;line-height:1.1;color:var(--td);margin:0 0 22px;max-width:480px}
+.about-row-p{font-size:15px;color:var(--tm);line-height:1.9;max-width:440px}
+.about-row-steps{display:flex;flex-direction:column}
+.about-row-step{padding:clamp(18px,2.5vw,26px) 0;border-top:1px solid var(--lined)}
+.about-row-steps .about-row-step:first-child{border-top:none;padding-top:0}
+.about-row-step h4{font-family:var(--H);font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:.02em;color:var(--td);margin:0 0 8px}
+.about-row-step p{font-size:14px;color:var(--tm);line-height:1.8;max-width:440px}
+.ab-simple{background:var(--w);padding:clamp(56px,8vw,104px) var(--pad)}
+.ab-simple-in{max-width:1200px;margin:0 auto}
+.ab-row{max-width:640px;margin:0 auto;text-align:center}
+.ab-row .about-row-h{margin:0 auto 18px;max-width:none}
+.ab-row .about-row-p{max-width:none;margin:0 auto}
+.ab-trio{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.6vw,18px);margin:clamp(40px,6vw,72px) 0}
+.ab-trio img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px;display:block}
+.ab-how{background:var(--bg);padding:clamp(60px,8vw,104px) var(--pad)}
+.ab-how-in{max-width:1200px;margin:0 auto}
+.ab-how-cols{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--yline)}
+.ab-how-cols>div{padding:26px clamp(18px,3vw,40px) 0 0}
+.ab-how-cols>div+div{padding-left:clamp(18px,3vw,40px);border-left:1px solid var(--yline)}
+.ab-how-cols h4{font-family:var(--H);font-weight:800;font-size:1.05rem;text-transform:uppercase;letter-spacing:.03em;color:#fff;margin:0 0 10px;line-height:1.2}
+.ab-how-cols p{font-size:14.5px;color:var(--text2);line-height:1.85;max-width:320px}
+@media(max-width:880px){.ab-trio{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin:32px calc(var(--pad)*-1);padding:0 var(--pad);scrollbar-width:none;-webkit-overflow-scrolling:touch}.ab-trio::-webkit-scrollbar{display:none}.ab-trio img{flex:0 0 76%;scroll-snap-align:center;aspect-ratio:4/5}.ab-how-cols{grid-template-columns:1fr}.ab-how-cols>div,.ab-how-cols>div+div{padding:22px 0;border-left:none;border-bottom:1px solid var(--yline)}.ab-how-cols p{max-width:none}}
+@media(max-width:880px){.about-row,.about-row.reverse{flex-direction:column;min-height:auto}.about-row-img{min-height:280px;height:64vw}.about-row-text{padding:clamp(36px,8vw,48px) var(--pad)}.about-row-h,.about-row-p{max-width:none}}
+
+/* SERVICE CARDS */
+.svc-grid{display:flex;flex-direction:column;margin-top:clamp(40px,5vw,60px)}
+.svc-card{background:#100e0a;border:1px solid rgba(255,255,255,0.1);border-radius:var(--rad);overflow:hidden;display:flex;flex-direction:column;margin-bottom:20px;transition:border-color .25s ease}
+.svc-top{display:flex;flex-direction:row}
+.svc-img-wrap{overflow:hidden;width:320px;height:320px;flex-shrink:0;position:relative}
+.svc-img{width:100%;height:100%;object-fit:cover;object-position:50% var(--py,50%);display:block;transition:transform .5s var(--ease)}
+.svc-body{padding:clamp(22px,3.5vw,30px);display:flex;flex-direction:row;flex:1;gap:clamp(20px,3vw,40px);align-items:center;min-height:320px}
+.svc-body-main{flex:1;display:flex;flex-direction:column}
+.svc-meta{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
+.svc-meta-label{font-size:11px;font-weight:500;color:rgba(255,255,255,0.4);margin-bottom:3px}
+.svc-meta-val{font-family:var(--U);font-size:13px;font-weight:600;color:rgba(255,255,255,0.7)}
+.svc-name{font-family:var(--H);font-weight:800;font-size:clamp(1.15rem,1.9vw,1.5rem);text-transform:uppercase;letter-spacing:.02em;margin-bottom:12px;color:#fff;line-height:1.1}
+.svc-desc{font-size:14px;color:rgba(255,255,255,0.68);line-height:1.8;flex:1}
+.svc-body-cta{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:12px;flex-shrink:0;width:190px}
+.svc-cta-row{display:flex;gap:8px;align-items:stretch}
+.svc-card-book{display:block;flex:1;font-family:var(--U);font-weight:800;font-size:11.5px;letter-spacing:1px;text-transform:uppercase;padding:14px 10px;background:var(--y);color:#0a0908;border:none;cursor:pointer;border-radius:3px;text-align:center;transition:background .2s ease;white-space:nowrap}
+.svc-expand-btn{width:44px;flex-shrink:0;border:1px solid rgba(255,255,255,0.22);border-radius:3px;background:none;color:rgba(255,255,255,0.65);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .2s ease,color .2s ease}
+.svc-chev{width:13px;height:13px;transition:transform .25s var(--ease);flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.svc-card.open .svc-chev{transform:rotate(180deg)}
+.svc-acc-body{max-height:0;overflow:hidden;transition:max-height .3s var(--ease);padding:0 clamp(22px,3.5vw,30px)}
+.svc-card.open .svc-acc-body{max-height:380px;border-top:1px solid rgba(255,255,255,0.08)}
+.svc-inc{list-style:none;padding:16px 0 22px;display:grid;grid-template-columns:1fr 1fr;gap:8px 20px}
+.svc-inc li{font-size:13px;color:rgba(255,255,255,0.62);display:flex;align-items:flex-start;gap:9px;line-height:1.5}
+.svc-inc li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--y);flex-shrink:0;margin-top:7px;border-radius:0}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;margin-top:clamp(36px,5vw,52px)}
+.faq-item{border-bottom:1px solid rgba(255,255,255,0.13)}
+.faq-item:first-child{border-top:1px solid rgba(255,255,255,0.13)}
+.faq-btn{width:100%;display:flex;align-items:center;justify-content:space-between;background:none;border:none;padding:22px 0;cursor:pointer;text-align:left;gap:16px;color:inherit}
+.faq-q{font-family:var(--U);font-weight:600;font-size:clamp(.95rem,1.5vw,1.05rem);color:var(--text);transition:color .2s ease}
+.faq-icon{width:22px;height:22px;flex-shrink:0;border:1px solid var(--line2);border-radius:2px;display:flex;align-items:center;justify-content:center;transition:border-color .2s ease,background .2s ease}
+.faq-item.open .faq-icon{background:var(--y);border-color:var(--y)}
+.faq-icon svg{width:10px;height:10px;fill:none;stroke:var(--muted);stroke-width:2;stroke-linecap:round;transition:stroke .2s ease,transform .25s var(--ease)}
+.faq-item.open .faq-icon svg{stroke:#0a0908;transform:rotate(45deg)}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height .3s var(--ease)}
+.faq-item.open .faq-ans{max-height:320px}
+.faq-ans p{font-size:14px;color:var(--text2);line-height:1.85;padding-bottom:20px;max-width:680px}
+
+/* GALLERY */
+.gal-grid{column-count:3;column-gap:10px;margin-top:clamp(32px,4vw,48px)}
+.gal-item{break-inside:avoid;margin-bottom:10px;overflow:hidden;cursor:pointer;position:relative;background:var(--panel);border-radius:var(--rad);display:block;aspect-ratio:3/4}
+.gal-item.sq{aspect-ratio:1/1}
+.gal-item img{width:100%;height:100%;display:block;object-fit:cover;opacity:0;transition:transform .5s var(--ease),opacity .45s ease}
+.gal-item img.ld{opacity:1}
+.gal-ov{position:absolute;inset:0;border-radius:var(--rad);background:rgba(10,9,8,0);display:flex;align-items:center;justify-content:center;transition:background .25s ease;pointer-events:none}
+.gal-ov span{font-family:var(--U);font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#fff;opacity:0;transition:opacity .25s ease}
+
+/* LIGHTBOX */
+.lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:2000;align-items:center;justify-content:center}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:90vh;object-fit:contain;border-radius:2px}
+.lb-x{position:absolute;top:20px;right:24px;background:none;border:none;color:rgba(255,255,255,.6);font-size:2rem;cursor:pointer;line-height:1}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.6);font-size:1.5rem;cursor:pointer;padding:12px 16px;border-radius:3px;transition:border-color .2s ease,color .2s ease}
+.lb-prev{left:14px}.lb-next{right:14px}
+
+/* SOCIAL */
+.soc-sec{background:var(--w2);padding:clamp(56px,8vw,88px) var(--pad);text-align:center;border-top:1px solid var(--lined)}
+.soc-sec h3{font-family:var(--H);font-weight:800;font-size:clamp(1.5rem,3.2vw,2.5rem);text-transform:uppercase;letter-spacing:.01em;color:var(--td);margin-bottom:10px}
+.soc-sec p{font-size:14px;color:var(--ts);margin:0 auto 30px;max-width:460px}
+.soc-cards{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+.soc-card{display:flex;align-items:center;gap:14px;background:var(--w);border:1px solid var(--lined);border-radius:var(--rad);padding:16px 26px;transition:border-color .2s ease,transform .2s var(--ease)}
+.soc-card svg{width:22px;height:22px;fill:var(--td);flex-shrink:0}
+.soc-card-name{font-family:var(--U);font-weight:700;font-size:13px;color:var(--td);display:block;text-align:left}
+.soc-card-handle{font-size:12px;letter-spacing:.3px;color:var(--ts);display:block;margin-top:2px;text-align:left}
+
+/* CONTACT + FORM */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(40px,7vw,88px);align-items:start}
+.contact-info .sec-h{font-size:clamp(1.7rem,3.2vw,2.5rem);margin-bottom:16px}
+.contact-info>p{font-size:14.5px;line-height:1.85;margin-bottom:30px;max-width:400px}
+.c-rows{display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
+.c-row{display:flex;align-items:flex-start;gap:14px}
+.c-label{font-size:13px;color:var(--ts);min-width:88px;padding-top:2px}
+.c-val{font-size:15px;font-weight:500;color:var(--td)}
+.form-card{background:var(--td);border-radius:var(--rad);padding:clamp(28px,4vw,40px)}
+.form{display:flex;flex-direction:column;gap:16px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f-group{display:flex;flex-direction:column;gap:8px}
+.f-group label{font-family:var(--U);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.68)}
+.f-group input,.f-group select,.f-group textarea{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.16);border-radius:2px;color:#fff;font-family:var(--B);font-weight:400;font-size:14px;padding:14px 16px;outline:none;width:100%;-webkit-appearance:none;transition:border-color .2s ease,box-shadow .2s ease}
+.f-group input::placeholder,.f-group textarea::placeholder{color:rgba(255,255,255,0.34)}
+.f-group select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.f-group select option{background:var(--td);color:#fff}
+.f-group input:focus,.f-group select:focus,.f-group textarea:focus{border-color:var(--y);box-shadow:0 0 0 3px rgba(227,185,42,0.16)}
+.f-group textarea{resize:vertical;min-height:110px}
+.f-submit{font-family:var(--U);font-weight:800;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;color:#0a0908;background:var(--y);border:none;padding:17px;cursor:pointer;width:100%;border-radius:3px;transition:background .2s ease,transform .15s ease}
+.f-submit:disabled{opacity:.7;cursor:default}
+.f-ok{display:none;font-family:var(--U);font-weight:600;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--y);text-align:center;padding:14px;border:1px solid var(--yline);border-radius:4px}
+.f-note{font-size:12.5px;color:rgba(255,255,255,0.5);text-align:center;margin-top:16px}
+.f-note a{color:var(--y);transition:color .2s ease}
+
+/* CTA BAND */
+.cta-band{background:#0d0b08;padding:clamp(32px,5vw,44px) var(--pad);text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(14px,3vw,28px)}
+.cta-band h2{font-family:var(--H);font-weight:800;font-size:clamp(1.15rem,2.2vw,1.6rem);text-transform:uppercase;letter-spacing:.01em;color:var(--text);line-height:1.1;margin:0}
+.cta-band p{font-size:13.5px;color:var(--text2);margin:0;max-width:420px;text-align:left}
+.cta-band button{flex-shrink:0}
+
+/* BEFORE / AFTER SLIDER (same component as Detail District, plus a pair switcher) */
+.ba-wrap{max-width:min(560px,calc((var(--vh,1vh)*100 - 200px)*.75));min-width:min(100%,300px);margin:0 auto}
+.ba-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 auto clamp(18px,3vw,26px);max-width:760px}
+.ba-tab{font-family:var(--U);font-weight:700;font-size:11px;letter-spacing:1.3px;text-transform:uppercase;padding:10px 16px;background:transparent;border:1px solid var(--line2);color:var(--text2);border-radius:3px;cursor:pointer;transition:background .2s ease,color .2s ease,border-color .2s ease}
+.ba-tab.on{background:var(--y);border-color:var(--y);color:#0a0908}
+.ba-slider{position:relative;aspect-ratio:3/4;margin:0 auto;border-radius:var(--rad);overflow:hidden;user-select:none;-webkit-user-select:none;cursor:ew-resize;background:#000;touch-action:pan-y}
+.ba-slider:focus-visible{outline:2px solid var(--y);outline-offset:3px}
+.ba-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.ba-slider .ba-after{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;clip-path:inset(0 0 0 50%)}
+.ba-tag{position:absolute;top:16px;font-family:var(--U);font-weight:800;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#fff;background:rgba(10,9,8,0.8);padding:7px 14px;border-radius:2px;pointer-events:none;z-index:2}
+.ba-tag.tag-before{left:16px}
+.ba-tag.tag-after{right:16px}
+.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:0;pointer-events:none;z-index:3}
+.ba-handle::before{content:'';position:absolute;top:0;bottom:0;left:-1px;width:2px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,0.25)}
+.ba-handle-grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:3px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,0.35)}
+.ba-handle-grip svg{width:20px;height:20px}
+.ba-cap{text-align:center;margin-top:16px;font-size:13px;color:var(--text2)}
+
+/* FOOTER */
+footer{background:#0d0b08;border-top:1px solid var(--line);padding:clamp(48px,7vw,72px) var(--pad) clamp(24px,3vw,36px)}
+.footer-top{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.3fr .85fr .85fr 1fr;gap:clamp(24px,4vw,40px);padding-bottom:clamp(36px,5vw,48px);border-bottom:1px solid var(--line);margin-bottom:24px}
+.f-logo{width:clamp(96px,10vw,124px);height:auto;display:block;margin-bottom:16px}
+.f-brand p{font-size:13px;color:var(--text2);line-height:1.8;max-width:270px;margin-bottom:18px}
+.f-soc-row{display:flex;gap:10px}
+.f-soc-row a{width:36px;height:36px;border-radius:3px;background:rgba(255,255,255,0.05);border:1px solid var(--line2);display:flex;align-items:center;justify-content:center;color:var(--muted);transition:color .2s ease,border-color .2s ease}
+.f-soc-row a svg{width:16px;height:16px;fill:currentColor}
+.f-col h4{font-family:var(--H);font-weight:800;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--y);margin-bottom:18px}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.f-col ul li a,.f-col ul li span{font-size:13px;color:var(--text2);transition:color .2s ease;cursor:pointer}
+.f-phone{display:block;font-family:var(--U);font-weight:700;font-size:1rem;color:var(--text);letter-spacing:.3px;margin-bottom:14px}
+.f-hours{margin-bottom:16px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.f-hours-row{display:flex;justify-content:space-between;gap:12px;font-size:13px;font-weight:500;color:var(--text2);padding:3px 0}
+.f-hours-row span:first-child{font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:11px}
+.footer-bottom{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.footer-bottom p{font-size:12px;color:rgba(243,238,226,0.34)}
+
+/* HOVER - only on devices that actually hover */
+@media(hover:hover) and (pointer:fine){
+ .nav-links a:hover{color:var(--y)}.nav-links a:hover::after{width:100%}
+ .nav-ig:hover{border-color:var(--y);color:var(--y)}
+ .nav-phone:hover{color:var(--y)}
+ .nav-book:hover,.btn-y:hover,.mob-book:hover{background:#fff}
+ .btn-y:hover{transform:translateY(-2px)}
+ .btn-o:hover{border-color:var(--y);color:var(--y)}
+ .btn-dark:hover{background:#26211a;transform:translateY(-2px)}
+ .mob-x:hover{color:var(--text)}
+ .home-svc-card:hover .home-svc-img img{transform:scale(1.05)}
+ .home-svc-card:hover .home-svc-link svg{transform:translateX(3px)}
+ .svc-card:hover{border-color:rgba(227,185,42,0.4)}
+ .svc-card:hover .svc-img{transform:scale(1.03)}
+ .svc-card-book:hover{background:#fff}
+ .svc-expand-btn:hover{border-color:var(--y);color:var(--y)}
+ .faq-btn:hover .faq-q{color:var(--y)}
+ .faq-btn:hover .faq-icon{border-color:var(--y)}
+ .gal-item:hover img{transform:scale(1.05)}
+ .gal-item:hover .gal-ov{background:rgba(10,9,8,.35)}
+ .gal-item:hover .gal-ov span{opacity:1}
+ .lb-prev:hover,.lb-next:hover{border-color:var(--y);color:var(--y)}
+ .lb-x:hover{color:#fff}
+ .soc-card:hover{border-color:var(--yd);transform:translateY(-2px)}
+ .f-submit:hover{background:#fff}
+ .f-note a:hover{color:#fff}
+ .f-col ul li a:hover,.f-col ul li span:hover{color:var(--text)}
+ .f-soc-row a:hover{color:var(--y);border-color:var(--y)}
+ .ba-tab:hover:not(.on){border-color:var(--y);color:var(--y)}
+ .cta-link:hover{color:var(--y)}
+}
+
+/* RESPONSIVE */
+@media(max-width:880px){
+ :root{--nav-h:82px}
+ nav{text-align:left}
+ .nav-inner{display:flex;width:100%;justify-content:space-between}
+ .nav-logo{margin-left:6px}
+ .nav-logo-img{height:70px}
+ .nav-links,.nav-book,.nav-ig,.nav-phone{display:none!important}
+ .ham{display:flex}
+ .nav-call{display:flex}
+  /* mobile: the portrait clip runs full-bleed behind the logo + copy */
+ .hero{min-height:calc(var(--vh,1vh)*100);align-items:center}
+ .hero-ov{background:linear-gradient(180deg,rgba(10,9,8,.5) 0%,rgba(10,9,8,.12) 30%,rgba(10,9,8,.5) 60%,rgba(10,9,8,.72) 100%)}
+ .hero-content{padding:calc(var(--nav-h) + 6px) var(--pad) calc(var(--nav-h) + 22px)}
+ .hero-logo{width:min(clamp(180px,50vw,250px),27vh);margin:0 0 12px}
+ .hero-tagline{margin-bottom:12px;font-size:clamp(1.3rem,6.3vw,1.7rem);letter-spacing:.02em}
+ .hero-sub{font-size:clamp(10.5px,3.1vw,13px);letter-spacing:.02em;margin-bottom:22px}
+ .hero-sub .dot{margin:0 .5em}
+ .hero-loc{margin-bottom:22px;font-size:10.5px}
+ .hero-btns{width:auto}
+ .hero-btns .btn-y{width:auto;padding:15px 40px}
+ .svc-top{flex-direction:column}
+ .svc-img-wrap{width:100%;aspect-ratio:4/3.2;height:auto}
+ .svc-body{flex-direction:column;gap:0;padding:clamp(16px,2.8vw,20px) clamp(18px,4vw,24px) clamp(18px,4vw,24px);min-height:0;align-items:stretch}
+ .svc-acc-body{padding:0 clamp(18px,4vw,24px)}
+ .svc-body-cta{width:100%;gap:14px;margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.08)}
+ .svc-body-cta .svc-meta{flex-direction:row;gap:28px;margin-bottom:0}
+ .svc-body-cta .svc-card-book{padding:14px 20px}
+ .svc-body-main{width:100%}
+ .svc-inc{grid-template-columns:1fr}
+ .about-split{grid-template-columns:1fr;gap:32px}
+ .about-split-img{min-height:78vw;max-height:440px}
+ .gal-grid{column-count:2;column-gap:8px}
+ .gal-item{margin-bottom:8px}
+ .contact-grid{grid-template-columns:1fr;gap:40px}
+ .f-row{grid-template-columns:1fr}
+ .footer-top{grid-template-columns:1fr 1fr;gap:28px}
+ .footer-bottom{flex-direction:column;text-align:center;gap:6px}
+ .cta-band p{text-align:center}
+}
+@media(max-width:540px){
+ .footer-top{grid-template-columns:1fr}
+}
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.06s}
+.reveal-delay-2{transition-delay:.12s}
+.reveal-delay-3{transition-delay:.18s}
+@media(max-width:880px){.ab-trio img.reveal{transform:none;opacity:1}}
+@media(prefers-reduced-motion:reduce){
+ .reveal{transform:none;transition:opacity .3s ease}
+  *{scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+ <symbol id="ico-ig" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></symbol>
+</svg>
+
+<nav>
+ <div class="nav-inner">
+ <div class="nav-logo" onclick="goHome()">
+ <img class="nav-logo-img" src="img/knight-logo.webp" alt="Knight AutoSpa">
+ </div>
+ <div class="nav-links">
+ <a data-nav="home" onclick="showPage('home')">Home</a>
+ <a data-nav="services" onclick="showPage('services')">Services</a>
+ <a data-nav="about" onclick="showPage('about')">About</a>
+ <a data-nav="gallery" onclick="showPage('gallery')">Gallery</a>
+ <a data-nav="contact" onclick="showPage('contact')">Contact</a>
+ </div>
+ <div class="nav-right">
+ <a href="tel:8326095261" class="nav-phone" aria-label="Call or text 832-609-5261"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>832-609-5261</span></a>
+ <a href="https://www.instagram.com/knight_autospaa/" target="_blank" rel="noopener" class="nav-ig" aria-label="Knight AutoSpa on Instagram"><svg viewBox="0 0 24 24"><use href="#ico-ig"/></svg></a>
+ <button class="nav-book" onclick="showPage('contact')">Book a Detail</button>
+ <a href="sms:+18326095261" class="nav-call" aria-label="Text Knight AutoSpa at 832-609-5261">Text Us</a>
+ <button class="ham" id="ham" onclick="toggleMenu()" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
+ </div>
+</nav>
+
+<div class="mob" id="mob">
+ <button class="mob-x" onclick="toggleMenu()" aria-label="Close menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+ <div class="mob-links">
+ <a onclick="mnav('home')">Home</a>
+ <a onclick="mnav('services')">Services</a>
+ <a onclick="mnav('about')">About</a>
+ <a onclick="mnav('gallery')">Gallery</a>
+ <a onclick="mnav('contact')">Contact</a>
+ </div>
+ <div class="mob-bottom">
+ <button class="mob-book" onclick="mnav('contact')">Book a Detail</button>
+ <a href="tel:8326095261" class="mob-ig" style="font-size:17px;letter-spacing:1px">832-609-5261</a>
+ <a href="https://www.instagram.com/knight_autospaa/" target="_blank" rel="noopener" class="mob-ig">@knight_autospaa</a>
+ </div>
+</div>
+
+<!-- ═══ HOME ═══ -->
+<div class="page" id="home">
+ <section class="hero">
+ <div class="hero-bg">
+ <video id="heroVid" muted autoplay loop playsinline preload="auto" poster="img/knight-hero-3-poster.webp" aria-label="Matte black Porsche 911 GT3 RS after a detail"></video>
+ <script>(function(){var v=document.getElementById('heroVid'),m=window.matchMedia('(max-width:880px)').matches,s=m?'img/knight-hero-mobile-3.mp4':'img/knight-hero-3.mp4';v.setAttribute('data-src',s);v.poster=m?'img/knight-hero-mobile-3-poster.webp':'img/knight-hero-3-poster.webp';v.src=s;})();</script>
+ </div>
+ <div class="hero-ov"></div>
+ <div class="hero-content">
+ <img class="hero-logo" src="img/knight-logo.webp" alt="Knight AutoSpa">
+ <h1 class="hero-tagline">Where your car gets<br>treated like royalty.</h1>
+ <p class="hero-sub">Full Details<span class="dot">&bull;</span>Paint Correction<span class="dot">&bull;</span>Paint Protection</p>
+ <div class="hero-btns">
+ <button class="btn-y" onclick="showPage('contact')">Book a Detail</button>
+ </div>
+ </div>
+ </section>
+
+ <!-- CREAM: What we do -->
+ <div class="sec" style="background:var(--w)">
+ <div class="sec-inner">
+ <div class="reveal">
+ <h2 class="sec-h dark">Built For<br>Every Ride.</h2>
+ <p class="sec-sub dark" style="max-width:560px">Whatever you drive, the standard is the same: careful hands and a finish that holds up. Choose what your vehicle needs below.</p>
+ </div>
+ <div class="home-svc-grid">
+ <div class="home-svc-card reveal" onclick="showPage('services')">
+ <div class="home-svc-img" style="--py:96%"><img src="img/knight-53.webp" alt="White GMC Yukon after an exterior detail" loading="lazy"></div>
+ <div class="home-svc-cap">
+ <h3>Exterior Detail</h3>
+ <p>Hand washed from roof to rocker panels, with the glass, wheels, and tires finished clean.</p>
+ <span class="home-svc-link">See What's Included <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+ </div>
+ </div>
+ <div class="home-svc-card reveal reveal-delay-1" onclick="showPage('services')">
+ <div class="home-svc-img" style="--py:50%"><img src="img/knight-28.webp" alt="Detailed leather interior of a Ford F-150" loading="lazy"></div>
+ <div class="home-svc-cap">
+ <h3>Interior Detail</h3>
+ <p>Seats, carpet, console, and trim cleaned until the cabin feels new again.</p>
+ <span class="home-svc-link">See What's Included <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+ </div>
+ </div>
+ <div class="home-svc-card reveal reveal-delay-2" onclick="showPage('services')">
+ <div class="home-svc-img" style="--py:55%"><img src="img/knight-09.webp" alt="Mirror-finish hood on a black Corvette after paint correction" loading="lazy"></div>
+ <div class="home-svc-cap">
+ <h3>Paint Correction</h3>
+ <p>Swirls and light scratches polished away so your paint reflects again.</p>
+ <span class="home-svc-link">See What's Included <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+ </div>
+ </div>
+ <div class="home-svc-card reveal reveal-delay-3" onclick="showPage('services')">
+ <div class="home-svc-img" style="--py:100%"><img src="img/knight-12.webp" alt="Black Range Rover Sport with a deep gloss finish" loading="lazy"></div>
+ <div class="home-svc-cap">
+ <h3>Ceramic Coating</h3>
+ <p>Long-lasting gloss and protection that makes every wash easier.</p>
+ <span class="home-svc-link">See What's Included <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+ </div>
+ </div>
+ </div>
+ <div style="text-align:center;margin-top:clamp(28px,4vw,40px)">
+ <button class="btn-dark" onclick="showPage('services')">Explore Services</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- DARK: Some details we've done - muted looping vehicle clips -->
+ <div class="sec" style="padding-bottom:clamp(72px,9vw,108px)">
+ <div class="sec-inner">
+ <div class="reveal" style="margin-bottom:clamp(28px,4vw,44px)">
+ <h2 class="sec-h" style="margin-bottom:10px">Some Details<br>We've Done.</h2>
+ <p class="sec-sub" style="max-width:560px">A few of the vehicles that have been through our hands.</p>
+ </div>
+ <div class="clips-grid" id="clipsGrid"></div>
+ <div style="text-align:center;margin-top:clamp(28px,4vw,40px)">
+ <button class="btn-y" onclick="showPage('gallery')">Browse the Full Gallery</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- DARK: Before / After slider (Detail District component) -->
+ <div class="sec" style="border-top:1px solid var(--line)">
+ <div class="sec-inner">
+ <div class="reveal" style="text-align:center;margin-bottom:clamp(24px,4vw,36px)">
+ <h2 class="sec-h" style="margin-bottom:10px">The Proof Is In<br>The Finish.</h2>
+ <p class="sec-sub" style="margin:0 auto">Drag the divider to compare each vehicle before and after.</p>
+ </div>
+ <div class="ba-tabs reveal" id="baTabs"></div>
+ <div class="ba-wrap reveal">
+ <div class="ba-slider" id="baSlider" tabindex="0" role="slider" aria-label="Before and after comparison" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+ <img id="baBefore" src="img/knight-ba-1-before.webp" alt="Wheel before detailing">
+ <div class="ba-after" id="baAfter"><img id="baAfterImg" src="img/knight-ba-1-after.webp" alt="Wheel after detailing"></div>
+ <div class="ba-tag tag-before">Before</div>
+ <div class="ba-tag tag-after">After</div>
+ <div class="ba-handle" id="baHandle"><div class="ba-handle-grip"><svg viewBox="0 0 24 24" fill="none"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6" stroke="#0a0908" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+ </div>
+ <p class="ba-cap" id="baCap"></p>
+ </div>
+ </div>
+ </div>
+
+ <!-- DARK: FAQ -->
+ <div class="sec" style="border-top:1px solid var(--line)">
+ <div class="sec-inner" style="max-width:800px">
+ <h2 class="sec-h" style="margin-bottom:0">Questions, Answered.</h2>
+ <div class="faq-list">
+ <div class="faq-item" id="f1">
+ <button class="faq-btn" onclick="toggleFaq('f1')">
+ <span class="faq-q">Will you come to my home or office?</span>
+ <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+ </button>
+ <div class="faq-ans"><p>Yes. Everything we need travels with us, so the detail happens wherever your vehicle is parked.</p></div>
+ </div>
+ <div class="faq-item" id="f2">
+ <button class="faq-btn" onclick="toggleFaq('f2')">
+ <span class="faq-q">Where do you work?</span>
+ <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+ </button>
+ <div class="faq-ans"><p>We're based in Fulshear and Katy, TX and serve the surrounding area. If you're not sure you're in range, send us your zip code.</p></div>
+ </div>
+ <div class="faq-item" id="f3">
+ <button class="faq-btn" onclick="toggleFaq('f3')">
+ <span class="faq-q">What does a detail cost?</span>
+ <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+ </button>
+ <div class="faq-ans"><p>It depends on the size of the vehicle and its condition. Call, text, or send a request with what you drive and what you're after, and we'll quote you.</p></div>
+ </div>
+ <div class="faq-item" id="f4">
+ <button class="faq-btn" onclick="toggleFaq('f4')">
+ <span class="faq-q">Paint correction or ceramic coating: which do I need?</span>
+ <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+ </button>
+ <div class="faq-ans"><p>Correction fixes the paint by polishing out swirls and light scratches. Ceramic coating protects it afterward. Plenty of customers do both, correction first. Tell us about your vehicle and we'll recommend one.</p></div>
+ </div>
+ <div class="faq-item" id="f5">
+ <button class="faq-btn" onclick="toggleFaq('f5')">
+ <span class="faq-q">What can you detail?</span>
+ <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+ </button>
+ <div class="faq-ans"><p>Cars, trucks, SUVs, boats, RVs, and motorcycles. If yours is something else, send a photo and ask.</p></div>
+ </div>
+ <div class="faq-item" id="f6">
+ <button class="faq-btn" onclick="toggleFaq('f6')">
+ <span class="faq-q">How do I schedule?</span>
+ <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+ </button>
+ <div class="faq-ans"><p>Call or text 832-609-5261, use the form on this page, or message @knight_autospaa on Instagram.</p></div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- CREAM: Quote request, embedded on Home -->
+ <div class="sec" style="background:var(--w)">
+ <div class="sec-inner">
+ <div class="contact-grid">
+ <div class="contact-info" style="color:var(--td)">
+ <h2 class="sec-h dark">Your Vehicle<br>Is Next.</h2>
+ <p style="color:var(--tm)">Share what you drive and what it needs. We'll reply with a quote and the next open day.</p>
+ <div class="c-rows">
+ <div class="c-row"><span class="c-label">Phone</span><span class="c-val"><a href="tel:8326095261">832-609-5261</a></span></div>
+ <div class="c-row"><span class="c-label">Instagram</span><span class="c-val"><a href="https://www.instagram.com/knight_autospaa/" target="_blank" rel="noopener">@knight_autospaa</a></span></div>
+ <div class="c-row"><span class="c-label">Serving</span><span class="c-val">Fulshear, Katy, and nearby (mobile)</span></div>
+ <!-- TODO(Hazel): add real hours once the client confirms them -->
+ <div class="c-row"><span class="c-label">Hours</span><span class="c-val" style="font-size:14px">By appointment. Call or text to schedule.</span></div>
+ </div>
+ </div>
+ <!-- TODO(Hazel): replace REPLACE_WITH_CLIENT_EMAIL below with the client's real inbox before launch - formsubmit.co needs a live address to deliver submissions -->
+ <div class="form-card">
+ <form class="form" id="bookFormHome" action="https://formsubmit.co/REPLACE_WITH_CLIENT_EMAIL" method="POST" onsubmit="handleForm(event)">
+ <input type="hidden" name="_subject" value="New Detail Request - Knight AutoSpa">
+ <input type="hidden" name="_captcha" value="false">
+ <input type="hidden" name="_template" value="table">
+ <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+ <div class="f-row">
+ <div class="f-group"><label for="hn">Name</label><input type="text" id="hn" name="name" placeholder="Your name" required autocomplete="name"></div>
+ <div class="f-group"><label for="hp">Phone</label><input type="tel" id="hp" name="phone" placeholder="Your phone number" required autocomplete="tel"></div>
+ </div>
+ <div class="f-group"><label for="he">Email</label><input type="email" id="he" name="email" placeholder="example@gmail.com" required autocomplete="email"></div>
+ <div class="f-group"><label for="hs">Service</label>
+ <select id="hs" name="service" required>
+ <option value="" disabled selected>Choose a service</option>
+ <option>Exterior Detail</option>
+ <option>Interior Detail</option>
+ <option>Full Detail (Interior + Exterior)</option>
+ <option>Paint Correction</option>
+ <option>Ceramic Coating</option>
+ <option>Engine Bay Cleaning</option>
+ <option>Not sure yet</option>
+ </select>
+ </div>
+ <div class="f-group"><label for="hv">Vehicle</label><input type="text" id="hv" name="vehicle" placeholder="Year, make, and model" autocomplete="off"></div>
+ <div class="f-group"><label for="hm">Message</label><textarea id="hm" name="message" placeholder="Your location, preferred dates, anything helpful..."></textarea></div>
+ <button type="submit" class="f-submit">Request My Quote</button>
+ <div class="f-ok">Request received. We'll be in touch soon.</div>
+ </form>
+ <p class="f-note">Prefer to talk? Call or text <a href="tel:8326095261">832-609-5261</a> or message <a href="https://www.instagram.com/knight_autospaa/" target="_blank" rel="noopener">@knight_autospaa</a> on Instagram.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Social -->
+ <div class="soc-sec">
+ <h3>See More On Instagram</h3>
+ <p>Fresh work and finished vehicles, posted on our Instagram.</p>
+ <div class="soc-cards">
+ <a href="https://www.instagram.com/knight_autospaa/" target="_blank" rel="noopener" class="soc-card">
+ <svg viewBox="0 0 24 24"><use href="#ico-ig"/></svg>
+ <div><span class="soc-card-name">Instagram</span><span class="soc-card-handle">@knight_autospaa</span></div>
+ </a>
+ </div>
+ </div>
+</div>
+
+<!-- ═══ SERVICES ═══ -->
+<div class="page" id="services">
+ <div style="height:var(--nav-h)"></div>
+ <!-- TODO(Hazel): the "What's included" lists and any pricing tiers are generic placeholders - confirm the real inclusions with the client (their Instagram says "DM for pricing", so no prices are shown) -->
+ <div class="sec" style="background:var(--w);padding-top:clamp(60px,8vw,88px)">
+ <div class="sec-inner">
+ <h2 class="sec-h dark">Choose Your<br>Service.</h2>
+ <p class="sec-sub dark">Everything is mobile, so the work happens at your home or office. Pricing depends on the vehicle and its condition.</p>
+ <div class="svc-grid">
+
+ <div class="svc-card reveal" id="s1">
+ <div class="svc-top">
+ <div class="svc-img-wrap" style="--py:98%"><img class="svc-img" src="img/knight-53.webp" alt="White GMC Yukon after an exterior detail" loading="lazy"></div>
+ <div class="svc-body">
+ <div class="svc-body-main">
+ <h3 class="svc-name">Exterior Detail</h3>
+ <p class="svc-desc">A careful hand wash from roof to rocker panels, with the paint, glass, wheels, and tires all finished clean.</p>
+ </div>
+ <div class="svc-body-cta">
+ <div class="svc-meta">
+ <div><div class="svc-meta-label">Service</div><div class="svc-meta-val">Mobile</div></div>
+ <div><div class="svc-meta-label">Pricing</div><div class="svc-meta-val">Quoted per vehicle</div></div>
+ </div>
+ <div class="svc-cta-row">
+ <button class="svc-card-book" onclick="showPage('contact')">Get Pricing</button>
+ <button class="svc-expand-btn" onclick="toggleSvc('s1')" aria-label="What's Included"><svg class="svc-chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="svc-acc-body">
+ <ul class="svc-inc">
+ <li>Hand wash and dry</li><li>Wheels, tires, and wheel wells cleaned</li>
+ <li>Tires dressed</li><li>Door jambs cleaned</li>
+ <li>Glass cleaned outside</li><li>Price set by size and condition</li>
+ </ul>
+ </div>
+ </div>
+
+ <div class="svc-card reveal" id="s2">
+ <div class="svc-top">
+ <div class="svc-img-wrap" style="--py:50%"><img class="svc-img" src="img/knight-28.webp" alt="Detailed leather interior of a Ford F-150" loading="lazy"></div>
+ <div class="svc-body">
+ <div class="svc-body-main">
+ <h3 class="svc-name">Interior Detail</h3>
+ <p class="svc-desc">Vacuumed, wiped, and worked over until the cabin feels new again: seats, carpet, mats, console, and trim.</p>
+ </div>
+ <div class="svc-body-cta">
+ <div class="svc-meta">
+ <div><div class="svc-meta-label">Service</div><div class="svc-meta-val">Mobile</div></div>
+ <div><div class="svc-meta-label">Pricing</div><div class="svc-meta-val">Quoted per vehicle</div></div>
+ </div>
+ <div class="svc-cta-row">
+ <button class="svc-card-book" onclick="showPage('contact')">Get Pricing</button>
+ <button class="svc-expand-btn" onclick="toggleSvc('s2')" aria-label="What's Included"><svg class="svc-chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="svc-acc-body">
+ <ul class="svc-inc">
+ <li>Complete vacuum</li><li>Carpet and mats cleaned</li>
+ <li>Seats cleaned</li><li>Dash, console, and door panels wiped</li>
+ <li>Vents and tight spots detailed</li><li>Glass cleaned inside</li>
+ </ul>
+ </div>
+ </div>
+
+ <div class="svc-card reveal" id="s3">
+ <div class="svc-top">
+ <div class="svc-img-wrap" style="--py:55%"><img class="svc-img" src="img/knight-09.webp" alt="Mirror-finish hood on a black Corvette after paint correction" loading="lazy"></div>
+ <div class="svc-body">
+ <div class="svc-body-main">
+ <h3 class="svc-name">Paint Correction</h3>
+ <p class="svc-desc">Machine polishing removes swirls and light scratches, and the paint gets its depth and gloss back.</p>
+ </div>
+ <div class="svc-body-cta">
+ <div class="svc-meta">
+ <div><div class="svc-meta-label">Service</div><div class="svc-meta-val">Mobile</div></div>
+ <div><div class="svc-meta-label">Pricing</div><div class="svc-meta-val">Quoted per vehicle</div></div>
+ </div>
+ <div class="svc-cta-row">
+ <button class="svc-card-book" onclick="showPage('contact')">Get Pricing</button>
+ <button class="svc-expand-btn" onclick="toggleSvc('s3')" aria-label="What's Included"><svg class="svc-chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="svc-acc-body">
+ <ul class="svc-inc">
+ <li>Wash, clay, and iron removal before polishing</li><li>Every panel machine polished</li>
+ <li>Light swirls polished out</li><li>Panels wiped clean to show the true finish</li>
+ <li>Recommended before a ceramic coating</li><li>Correction depth depends on the paint</li>
+ </ul>
+ </div>
+ </div>
+
+ <div class="svc-card reveal" id="s4">
+ <div class="svc-top">
+ <div class="svc-img-wrap" style="--py:98%"><img class="svc-img" src="img/knight-12.webp" alt="Black Range Rover Sport with a deep gloss finish" loading="lazy"></div>
+ <div class="svc-body">
+ <div class="svc-body-main">
+ <h3 class="svc-name">Ceramic Coating</h3>
+ <p class="svc-desc">A protective ceramic layer over prepped paint. It looks slick and deep, and it's far easier to keep clean.</p>
+ </div>
+ <div class="svc-body-cta">
+ <div class="svc-meta">
+ <div><div class="svc-meta-label">Service</div><div class="svc-meta-val">Mobile</div></div>
+ <div><div class="svc-meta-label">Pricing</div><div class="svc-meta-val">Quoted per vehicle</div></div>
+ </div>
+ <div class="svc-cta-row">
+ <button class="svc-card-book" onclick="showPage('contact')">Get Pricing</button>
+ <button class="svc-expand-btn" onclick="toggleSvc('s4')" aria-label="What's Included"><svg class="svc-chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="svc-acc-body">
+ <ul class="svc-inc">
+ <li>Wash, clay, and iron removal</li><li>Paint prepped, corrected where needed</li>
+ <li>Coating applied panel by panel</li><li>Deep gloss and a hydrophobic finish</li>
+ <li>Simpler washes afterward</li><li>Ask which coating fits your vehicle</li>
+ </ul>
+ </div>
+ </div>
+
+ <div class="svc-card reveal" id="s5">
+ <div class="svc-top">
+ <div class="svc-img-wrap" style="--py:74%"><img class="svc-img" src="img/knight-55.webp" alt="Cleaned engine bay on a Ford truck" loading="lazy"></div>
+ <div class="svc-body">
+ <div class="svc-body-main">
+ <h3 class="svc-name">Engine Bays, Boats &amp; RVs</h3>
+ <p class="svc-desc">Engine bay cleaning to pair with any service, plus detailing for boats, RVs, motorcycles, and oversized trucks. Not sure what yours needs? Send a photo.</p>
+ </div>
+ <div class="svc-body-cta">
+ <div class="svc-meta">
+ <div><div class="svc-meta-label">Service</div><div class="svc-meta-val">Mobile</div></div>
+ <div><div class="svc-meta-label">Pricing</div><div class="svc-meta-val">Quoted per vehicle</div></div>
+ </div>
+ <div class="svc-cta-row">
+ <button class="svc-card-book" onclick="showPage('contact')">Get Pricing</button>
+ <button class="svc-expand-btn" onclick="toggleSvc('s5')" aria-label="What's Included"><svg class="svc-chev" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="svc-acc-body">
+ <ul class="svc-inc">
+ <li>Engine bay cleaning</li><li>Boats</li>
+ <li>RVs and travel trailers</li><li>Motorcycles</li><li>UTVs and side-by-sides</li><li>Oversized trucks and SUVs</li>
+ </ul>
+ </div>
+ </div>
+
+ </div>
+ <div style="text-align:center;margin-top:clamp(40px,5vw,56px);max-width:640px;margin-left:auto;margin-right:auto">
+ <p style="font-size:16px;font-weight:700;color:var(--yd);margin-bottom:16px">Unsure where to start? Tell us about your vehicle and we'll recommend a plan.</p>
+ <button class="btn-dark" onclick="showPage('contact')">Ask Us</button>
+ </div>
+ </div>
+ </div>
+ <div class="cta-band">
+ <h2>The Shop Comes To You.</h2>
+ <p>Call or text 832-609-5261, or send a request online.</p>
+ <button onclick="showPage('contact')" class="btn-y">Book a Detail</button>
+ </div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<div class="page" id="about">
+ <div style="height:var(--nav-h)"></div>
+ <div style="background:var(--bg);padding:clamp(48px,7vw,88px) var(--pad) clamp(72px,10vw,140px)">
+ <div style="max-width:1200px;margin:0 auto">
+ <div class="about-split">
+ <div class="about-split-img">
+ <div style="position:absolute;inset:0 22px 22px 0;border:1px solid var(--yline);transform:translate(22px,22px)"></div>
+ <div style="overflow:hidden;position:absolute;inset:0 22px 22px 0;box-shadow:0 24px 60px rgba(0,0,0,.45)">
+ <img src="img/knight-32.webp" alt="Red Dodge Challenger detailed under a timber pavilion" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 100%">
+ </div>
+ </div>
+ <div class="about-split-text">
+ <h2 class="sec-h" style="font-size:clamp(1.7rem,3.4vw,2.8rem);margin-bottom:20px">Treated Like<br>Royalty.</h2>
+ <p style="font-size:14.5px;color:var(--text2);line-height:1.9;margin-bottom:14px">Knight AutoSpa is a locally owned mobile detailer based in Fulshear and Katy. We bring the equipment to you and give every vehicle the time it needs, from a full interior reset to paint correction and ceramic coating.</p>
+ <p style="font-size:14.5px;color:var(--text2);line-height:1.9;margin-bottom:30px">Daily drivers, work trucks, boats, RVs, motorcycles, and the car that never leaves the garage all get the same standard.</p>
+ <button class="btn-y" onclick="showPage('contact')" style="align-self:flex-start">Book a Detail</button>
+ </div>
+ </div>
+ </div>
+ <div style="max-width:700px;margin:clamp(56px,8vw,96px) auto 0">
+ <h2 class="sec-h" style="font-size:clamp(1.35rem,2.5vw,1.9rem);margin-bottom:20px">Why Choose A Knight.</h2>
+ <p style="font-size:15px;color:var(--text2);line-height:1.95;margin-bottom:18px">Mobile service means no drop-off and no lost afternoon. The detail happens where you park, on your schedule.</p>
+ <p style="font-size:15px;color:var(--text2);line-height:1.95">Paint correction and ceramic coating are the newest additions to the lineup, and the finish shows it. We would rather let the results do the talking.</p>
+ </div>
+ </div>
+ <section class="ab-simple">
+ <div class="ab-simple-in">
+ <div class="ab-row">
+ <h2 class="about-row-h">Patience Shows<br>In The Paint.</h2>
+ <p class="about-row-p">We don't rush a vehicle because the schedule is tight. Each one gets a full wash, careful attention, and a last look at the details most people only notice when they're missing.</p>
+ </div>
+ <div class="ab-trio">
+ <img class="reveal" src="img/knight-06.webp" alt="Blue Audi R8 in a garage under hexagon lighting" loading="lazy" style="object-position:center 66%">
+ <img class="reveal reveal-delay-1" src="img/knight-56.webp" alt="Matte grey Porsche 911 in a driveway" loading="lazy" style="object-position:center 66%">
+ <img class="reveal reveal-delay-2" src="img/knight-49.webp" alt="Green Chevrolet Camaro in a driveway" loading="lazy" style="object-position:center 72%">
+ </div>
+ <div class="ab-row">
+ <h2 class="about-row-h">Restore,<br>Then Protect.</h2>
+ <p class="about-row-p">Paint correction polishes out swirls and light scratches so the finish reflects properly again. A ceramic coating then locks in that gloss and makes future washes easier. If you're unsure which you need, ask.</p>
+ </div>
+ </div>
+ </section>
+
+ <section class="ab-how">
+ <div class="ab-how-in">
+ <h2 class="sec-h" style="font-size:clamp(1.6rem,3.2vw,2.6rem);margin-bottom:clamp(28px,4vw,48px)">From Request<br>To Finish.</h2>
+ <div class="ab-how-cols">
+ <div><h4>Tell Us About Your Vehicle</h4><p>Send a call, a text, or the form with what you drive and what it needs.</p></div>
+ <div><h4>We Arrive Ready</h4><p>We come to your home or office with the equipment needed to do the work.</p></div>
+ <div><h4>See The Finished Result</h4><p>Walk out to a vehicle that looks and feels right, inside and out.</p></div>
+ </div>
+ </div>
+ </section>
+ <div class="cta-band">
+ <h2>Tell Us What You Drive.</h2>
+ <p>Call or text 832-609-5261, or send a request online.</p>
+ <button onclick="showPage('contact')" class="btn-y">Book a Detail</button>
+ </div>
+</div>
+
+<!-- ═══ GALLERY ═══ -->
+<div class="page" id="gallery">
+ <div style="height:var(--nav-h)"></div>
+ <div class="sec" style="background:var(--w);padding-top:clamp(60px,8vw,88px)">
+ <div class="sec-inner">
+ <h2 class="sec-h dark">Recent<br>Work.</h2>
+ <p class="sec-sub dark">Cars, trucks, RVs, and more, each finished to the same standard.</p>
+ <div class="gal-grid" id="galGrid"></div>
+ </div>
+ </div>
+ <div class="cta-band">
+ <h2>Want Yours To Look Like This?</h2>
+ <p>Yes, we work at your home or office across Fulshear, Katy, and nearby.</p>
+ <button onclick="showPage('contact')" class="btn-y">Book a Detail</button>
+ </div>
+</div>
+
+<!-- ═══ CONTACT ═══ -->
+<div class="page" id="contact">
+ <div style="height:var(--nav-h)"></div>
+ <div class="sec" style="background:var(--w)">
+ <div class="sec-inner">
+ <div class="contact-grid">
+ <div class="contact-info" style="color:var(--td)">
+ <h2 class="sec-h dark">Tell Us About<br>Your Vehicle.</h2>
+ <p style="color:var(--tm)">Share what you drive and what you'd like done. Pricing depends on the vehicle and its condition, so we quote each job. Call or text anytime.</p>
+ <div class="c-rows">
+ <div class="c-row"><span class="c-label">Phone</span><span class="c-val"><a href="tel:8326095261">832-609-5261</a></span></div>
+ <div class="c-row"><span class="c-label">Instagram</span><span class="c-val"><a href="https://www.instagram.com/knight_autospaa/" target="_blank" rel="noopener">@knight_autospaa</a></span></div>
+ <div class="c-row"><span class="c-label">Serving</span><span class="c-val">Fulshear, Katy, and nearby (mobile)</span></div>
+ <!-- TODO(Hazel): add real hours once the client confirms them -->
+ <div class="c-row"><span class="c-label">Hours</span><span class="c-val" style="font-size:14px">By appointment. Call or text to schedule.</span></div>
+ </div>
+ <div class="soc-row">
+ <a href="https://www.instagram.com/knight_autospaa/" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:3px;border:1px solid var(--lined)"><svg width="17" height="17" fill="var(--ts)" viewBox="0 0 24 24"><use href="#ico-ig"/></svg></a>
+ </div>
+ </div>
+ <!-- TODO(Hazel): replace REPLACE_WITH_CLIENT_EMAIL below with the client's real inbox before launch -->
+ <div class="form-card">
+ <form class="form" id="bookForm" action="https://formsubmit.co/REPLACE_WITH_CLIENT_EMAIL" method="POST" onsubmit="handleForm(event)">
+ <input type="hidden" name="_subject" value="New Detail Request - Knight AutoSpa">
+ <input type="hidden" name="_captcha" value="false">
+ <input type="hidden" name="_template" value="table">
+ <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+ <div class="f-row">
+ <div class="f-group"><label for="fn">Name</label><input type="text" id="fn" name="name" placeholder="Your name" required autocomplete="name"></div>
+ <div class="f-group"><label for="fp">Phone</label><input type="tel" id="fp" name="phone" placeholder="Your phone number" required autocomplete="tel"></div>
+ </div>
+ <div class="f-group"><label for="fe">Email</label><input type="email" id="fe" name="email" placeholder="example@gmail.com" required autocomplete="email"></div>
+ <div class="f-group"><label for="fs">Service</label>
+ <select id="fs" name="service" required>
+ <option value="" disabled selected>Choose a service</option>
+ <option>Exterior Detail</option>
+ <option>Interior Detail</option>
+ <option>Full Detail (Interior + Exterior)</option>
+ <option>Paint Correction</option>
+ <option>Ceramic Coating</option>
+ <option>Engine Bay Cleaning</option>
+ <option>Not sure yet</option>
+ </select>
+ </div>
+ <div class="f-group"><label for="fv">Vehicle</label><input type="text" id="fv" name="vehicle" placeholder="Year, make, and model" autocomplete="off"></div>
+ <div class="f-group"><label for="fm">Message</label><textarea id="fm" name="message" placeholder="Your location, preferred dates, anything helpful..."></textarea></div>
+ <button type="submit" class="f-submit">Request My Quote</button>
+ <div class="f-ok">Request received. We'll be in touch soon.</div>
+ </form>
+ <p class="f-note">Prefer to talk? Call or text <a href="tel:8326095261">832-609-5261</a> or message <a href="https://www.instagram.com/knight_autospaa/" target="_blank" rel="noopener">@knight_autospaa</a> on Instagram.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+</div>
+
+<footer>
+ <div class="footer-top">
+ <div class="f-brand">
+ <img class="f-logo" src="img/knight-logo.webp" alt="Knight AutoSpa" loading="lazy">
+ <p>Where your car gets treated like royalty. Mobile auto detailing in Fulshear and Katy, TX, with paint correction, ceramic coatings, and full details at your door.</p>
+ <div class="f-soc-row"><a href="https://www.instagram.com/knight_autospaa/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><use href="#ico-ig"/></svg></a></div>
+ </div>
+ <div class="f-col"><h4>Navigate</h4><ul><li><span onclick="showPage('home')">Home</span></li><li><span onclick="showPage('services')">Services</span></li><li><span onclick="showPage('about')">About</span></li><li><span onclick="showPage('gallery')">Gallery</span></li><li><span onclick="showPage('contact')">Contact</span></li></ul></div>
+ <div class="f-col"><h4>Services</h4><ul><li><span onclick="showPage('services')">Exterior Detail</span></li><li><span onclick="showPage('services')">Interior Detail</span></li><li><span onclick="showPage('services')">Paint Correction</span></li><li><span onclick="showPage('services')">Ceramic Coating</span></li></ul></div>
+ <div class="f-col"><h4>Contact</h4><a href="tel:8326095261" class="f-phone">832-609-5261</a><div class="f-hours"><div class="f-hours-row"><span>Book</span><span>By Appointment</span></div></div><ul><li><a href="https://www.instagram.com/knight_autospaa/" target="_blank" rel="noopener">@knight_autospaa</a></li><li><span style="cursor:default">Fulshear &amp; Katy, TX</span></li></ul></div>
+ </div>
+ <div class="footer-bottom"><p>&copy; 2026 Knight AutoSpa.</p><p>Fulshear &amp; Katy, TX &middot; Mobile</p></div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb">
+ <button class="lb-x" onclick="closeLb()" aria-label="Close">&#x00D7;</button>
+ <button class="lb-prev" onclick="moveLb(-1)" aria-label="Previous">&#x2039;</button>
+ <img id="lbImg" alt="">
+ <button class="lb-next" onclick="moveLb(1)" aria-label="Next">&#x203A;</button>
+</div>
+
+<script>
+'use strict';
+if('scrollRestoration' in history)history.scrollRestoration='manual';
+
+// Nav scroll behavior
+(function(){
+ const nav=document.querySelector('nav');
+ window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);},{passive:true});
+})();
+
+
+// Gallery - index n maps to img/knight-NN.webp
+const GALLERY=[
+ {n:44,alt:'Black Ford Bronco Raptor after a detail'},
+ {n:6,alt:'Blue Audi R8 in a garage under hexagon lighting'},
+ {n:8,alt:'Black Corvette in a driveway after a detail'},
+ {n:32,alt:'Red Dodge Challenger under a timber pavilion'},
+ {n:28,alt:'Detailed leather interior of a Ford F-150',sq:true},
+ {n:10,alt:'White Jeep Gladiator after a wash'},
+ {n:1,alt:'Grey BMW 8 Series coupe in a driveway'},
+ {n:41,alt:'Red classic muscle car under a timber pavilion'},
+ {n:12,alt:'Black Range Rover Sport after a detail'},
+ {n:34,alt:'Black BMW wheel with red calipers, freshly detailed',sq:true},
+ {n:3,alt:'Black Cadillac Escalade under a timber pavilion'},
+ {n:49,alt:'Green Chevrolet Camaro in a driveway'},
+ {n:23,alt:'Red Jeep Wrangler after a wash'},
+ {n:11,alt:'Rear seats of a Range Rover, cleaned and detailed'},
+ {n:53,alt:'White GMC Yukon in a driveway'},
+ {n:9,alt:'Mirror-finish hood on a black Corvette'},
+ {n:14,alt:'Maroon vintage Ford Bronco in a driveway'},
+ {n:33,alt:'Black BMW X5 with a deep gloss finish'},
+ {n:46,alt:'Front of a Ram heavy duty truck after a wash'},
+ {n:7,alt:'Interior of a blue Audi R8, detailed',sq:true},
+ {n:21,alt:'Travel trailer washed and detailed'},
+ {n:13,alt:'Silver Mercedes-Benz E-Class in a driveway'},
+ {n:56,alt:'Matte grey Porsche 911 in a driveway'},
+ {n:24,alt:'Red Polaris UTV after a detail'},
+ {n:31,alt:'Black Ford F-150 in a driveway'},
+ {n:50,alt:'Camaro wheel with red calipers, freshly detailed',sq:true},
+ {n:48,alt:'Blue lifted Jeep Wrangler'},
+ {n:27,alt:'Interior of a yellow BMW, detailed'},
+ {n:45,alt:'Black Bronco Raptor front three-quarter view'},
+ {n:29,alt:'Camo Polaris crew UTV after a wash'},
+ {n:57,alt:'White lifted Ford F-150'},
+ {n:43,alt:'Interior of a Bronco Raptor, detailed'},
+ {n:40,alt:'Truck wheel and tire after a detail',sq:true},
+ {n:55,alt:'Engine bay of a Ford truck after cleaning'}
+].map(function(g){g.src='img/knight-'+(g.n<10?'0':'')+g.n+'.webp';g.t='img/knight-'+(g.n<10?'0':'')+g.n+'-t.webp';return g;});
+
+// "Some details we've done" - muted looping vehicle clips
+const CLIPS=[
+ {src:'img/knight-clip-1-lite.mp4',poster:'img/knight-clip-1-poster.webp',label:'Ford Mustang',alt:'Ford Mustang after a detail at sunset'},
+ {src:'img/knight-clip-2-lite.mp4',poster:'img/knight-clip-2-poster.webp',label:'White GT3 RS',alt:'White Porsche 911 GT3 RS after a detail'},
+ {src:'img/knight-clip-3-lite.mp4',poster:'img/knight-clip-3-poster.webp',label:'Pink GT3 RS',alt:'Pink Porsche 911 GT3 RS after a detail'},
+ {src:'img/knight-clip-4-lite.mp4',poster:'img/knight-clip-4-poster.webp',label:'Chevy Camaro',alt:'Green Chevrolet Camaro after a detail'},
+ {src:'img/knight-clip-5-lite.mp4',poster:'img/knight-clip-5-poster.webp',label:'Audi R8',alt:'Silver Audi R8 after a detail'},
+ {src:'img/knight-hero-mobile-3-lite.mp4',poster:'img/knight-hero-mobile-3-poster.webp',label:'Matte GT3 RS',alt:'Matte black Porsche 911 GT3 RS after a detail'}
+];
+function buildClips(){
+ const el=document.getElementById('clipsGrid');
+ if(!el||el.childElementCount)return;
+ CLIPS.forEach(function(c){
+ const d=document.createElement('div');d.className='clip-item';
+ const v=document.createElement('video');
+ v.muted=true;v.loop=true;v.playsInline=true;v.preload='metadata';
+ v.poster=c.poster;v.setAttribute('aria-label',c.alt);
+ const src=document.createElement('source');src.src=c.src;src.type='video/mp4';
+ v.appendChild(src);
+ const ov=document.createElement('div');ov.className='clip-ov';
+ const nm=document.createElement('div');nm.className='clip-name';nm.textContent=c.label;
+ d.appendChild(v);d.appendChild(ov);d.appendChild(nm);el.appendChild(d);
+ registerBgVideo(v);
+ });
+}
+
+function buildGrid(items,el,cb){
+ items.forEach(function(g,i){
+ const d=document.createElement('div');
+ d.className='gal-item'+(g.sq?' sq':'');
+ d.onclick=function(){cb(i);};
+ const img=document.createElement('img');
+ img.src=g.t||g.src;img.alt=g.alt;img.loading=i<8?'eager':'lazy';img.decoding='async';if(i<4)img.fetchPriority='high';img.width=640;img.height=g.sq?640:853;img.onload=function(){img.classList.add('ld');};if(img.complete&&img.naturalWidth)img.classList.add('ld');
+ const ov=document.createElement('div');ov.className='gal-ov';ov.innerHTML='<span>View</span>';
+ d.appendChild(img);d.appendChild(ov);el.appendChild(d);
+ });
+}
+let galBuilt=false;
+// warm the gallery in the background once the home page has settled, so its first photos are already cached
+window.addEventListener('load',function(){setTimeout(function(){(window.requestIdleCallback||function(f){setTimeout(f,300)})(function(){buildGal();});},1800);});
+function buildGal(){if(galBuilt)return;galBuilt=true;buildGrid(GALLERY,document.getElementById('galGrid'),openLb);}
+
+let lbCur=0;
+function openLb(i){lbCur=i;document.getElementById('lbImg').src=GALLERY[i].src;document.getElementById('lbImg').alt=GALLERY[i].alt;document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden';}
+function closeLb(){document.getElementById('lb').classList.remove('open');document.getElementById('lbImg').removeAttribute('src');document.body.style.overflow='';}
+function moveLb(d){lbCur=(lbCur+d+GALLERY.length)%GALLERY.length;document.getElementById('lbImg').src=GALLERY[lbCur].src;document.getElementById('lbImg').alt=GALLERY[lbCur].alt;}
+document.getElementById('lb').addEventListener('click',function(e){if(e.target===e.currentTarget)closeLb();});
+document.addEventListener('keydown',function(e){
+ if(!document.getElementById('lb').classList.contains('open'))return;
+ if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')moveLb(-1);if(e.key==='ArrowRight')moveLb(1);
+});
+
+const PAGES=['home','services','about','gallery','contact'];
+let _cur=null;
+function showPage(id,fromPop){
+ if(!PAGES.includes(id))id='home';
+ PAGES.forEach(function(p){const el=document.getElementById(p);el.classList.remove('active','visible');});
+ const next=document.getElementById(id);
+ next.classList.add('active');
+ window.scrollTo(0,0);document.body.scrollTop=0;document.documentElement.scrollTop=0;
+ void next.offsetHeight;
+ requestAnimationFrame(function(){window.scrollTo(0,0);requestAnimationFrame(function(){window.scrollTo(0,0);next.classList.add('visible');});});
+ if(!fromPop){
+ try{if(id==='home')history.pushState({page:'home'},'',' ');else if(id!==_cur)history.pushState({page:id},'','#'+id);else history.replaceState({page:id},'','#'+id);}catch(e){}
+ }
+ _cur=id;
+ document.querySelectorAll('.nav-links a').forEach(function(a){a.classList.toggle('on',a.getAttribute('data-nav')===id);});
+ if(id==='gallery')buildGal();
+ if(id==='home'){_bgVideos.forEach(function(v){setTimeout(function(){playVisible(v);},60);});}
+}
+window.addEventListener('popstate',function(e){
+ const id=(e.state&&e.state.page)||location.hash.replace('#','')||'home';
+ showPage(PAGES.includes(id)?id:'home',true);
+});
+
+function toggleMenu(){
+ document.getElementById('ham').classList.toggle('open');
+ document.getElementById('mob').classList.toggle('open');
+ document.querySelector('nav').classList.toggle('menu-open');
+ document.body.style.overflow=document.getElementById('mob').classList.contains('open')?'hidden':'';
+}
+function mnav(id){showPage(id);toggleMenu();}
+function goHome(){if(document.getElementById('mob').classList.contains('open'))toggleMenu();showPage('home');}
+
+function toggleSvc(id){
+ const card=document.getElementById(id);
+ const isOpen=card.classList.contains('open');
+ document.querySelectorAll('.svc-card.open').forEach(function(c){c.classList.remove('open');});
+ if(!isOpen)card.classList.add('open');
+}
+function toggleFaq(id){
+ const item=document.getElementById(id);
+ const isOpen=item.classList.contains('open');
+ document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
+ if(!isOpen)item.classList.add('open');
+}
+
+// Shared muted-video autoplay/pause-on-scroll controller - hero video + every clip
+var _bgVideos=[];
+var _bgIO=('IntersectionObserver' in window)?new IntersectionObserver(function(entries){
+ entries.forEach(function(e){if(e.isIntersecting)playVisible(e.target);else e.target.pause();});
+},{threshold:0.15}):null;
+function playVisible(v){if(v.offsetParent!==null)v.play().catch(function(){});}
+function registerBgVideo(v){
+ _bgVideos.push(v);
+ if(_bgIO)_bgIO.observe(v);else playVisible(v);
+}
+(function(){
+ const vids=[document.getElementById('heroVid')].filter(Boolean);
+ vids.forEach(function(v){registerBgVideo(v);playVisible(v);});
+ let _ul=false;
+ function _unlock(){if(_ul)return;_ul=true;_bgVideos.forEach(playVisible);}
+ ['touchstart','touchend','scroll','click','mousemove','keydown'].forEach(function(t){document.addEventListener(t,_unlock,{passive:true,once:true});});
+ document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible')_bgVideos.forEach(function(v){if(v.offsetParent!==null)playVisible(v);});});
+ window.addEventListener('pageshow',function(e){if(e.persisted)_bgVideos.forEach(function(v){if(v.offsetParent!==null)playVisible(v);});});
+})();
+(function(){
+ var v=document.getElementById('heroVid');
+ if(!v)return;
+ var mq=window.matchMedia('(max-width:880px)');
+ function pick(){
+ var m=mq.matches,src=m?'img/knight-hero-mobile-3.mp4':'img/knight-hero-3.mp4';
+ if(v.getAttribute('data-src')===src)return;
+ v.setAttribute('data-src',src);
+ v.poster=m?'img/knight-hero-mobile-3-poster.webp':'img/knight-hero-3-poster.webp';
+ v.src=src;v.load();playVisible(v);
+ }
+ if(mq.addEventListener)mq.addEventListener('change',pick);else if(mq.addListener)mq.addListener(pick);
+ pick();
+})();
+buildClips();
+
+// Start page (after helpers exist)
+(function(){
+ const hash=location.hash.replace('#','');
+ const start=PAGES.includes(hash)?hash:'home';
+ try{if(start==='home')history.replaceState({page:'home'},'',' ');else history.replaceState({page:start},'','#'+start);}catch(e){}
+ showPage(start,true);
+})();
+
+function handleForm(e){
+ e.preventDefault();
+ const form=e.target,btn=form.querySelector('.f-submit');
+ btn.textContent='Sending...';btn.disabled=true;
+ fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}})
+ .then(function(r){if(r.ok){form.reset();form.querySelector('.f-ok').style.display='block';btn.textContent='Sent';}else{btn.textContent='Error - Try Again';btn.disabled=false;}})
+ .catch(function(){btn.textContent='Error - Try Again';btn.disabled=false;});
+}
+
+// Before/after slider (Detail District component) with a switcher between real matched pairs
+const BA_PAIRS=[
+ {n:1,label:'BMW Wheels',cap:'Wheels and brake calipers on a BMW.',alt:'BMW wheel'},
+ {n:6,label:'Ram Exterior',cap:'Exterior wash and finish on a Ram heavy-duty truck.',alt:'Ram truck exterior'},
+ {n:7,label:'Ford Super Duty',cap:'Full exterior detail on a Ford Super Duty dually.',alt:'Ford Super Duty exterior'},
+ {n:4,label:'Tundra Interior',cap:'Front cabin of a Toyota Tundra.',alt:'Toyota Tundra interior'},
+ {n:5,label:'Engine Bay',cap:'Engine bay on a Ford truck.',alt:'Ford engine bay'}
+];
+// Each pair was registered so the subject (wheel, dash, engine) sits at the same spot in both frames
+function baSrc(n,k){return 'img/knight-ba-'+n+'-'+k+'.webp';}
+(function(){
+ var el=document.getElementById('baSlider');
+ if(!el)return;
+ var after=document.getElementById('baAfter'),handle=document.getElementById('baHandle'),dragging=false,cur=50;
+ var bImg=document.getElementById('baBefore'),aImg=document.getElementById('baAfterImg'),cap=document.getElementById('baCap'),tabs=document.getElementById('baTabs');
+ function setPct(pct){
+ pct=Math.max(0,Math.min(100,pct));cur=pct;
+ after.style.clipPath='inset(0 0 0 '+pct+'%)';
+ handle.style.left=pct+'%';
+ el.setAttribute('aria-valuenow',Math.round(pct));
+ }
+ function pctFromX(x){var r=el.getBoundingClientRect();return ((x-r.left)/r.width)*100;}
+ function move(x){setPct(pctFromX(x));}
+ function pick(i){
+ var p=BA_PAIRS[i];
+ bImg.src=baSrc(p.n,'before');aImg.src=baSrc(p.n,'after');
+ bImg.alt=p.alt+' before detailing';aImg.alt=p.alt+' after detailing';
+ cap.textContent=p.cap;
+ Array.prototype.forEach.call(tabs.children,function(t,k){t.classList.toggle('on',k===i);});
+ setPct(50);
+ }
+ BA_PAIRS.forEach(function(p,i){
+ var b=document.createElement('button');b.type='button';b.className='ba-tab';b.textContent=p.label;
+ b.onclick=function(){pick(i);};tabs.appendChild(b);
+ });
+ el.addEventListener('mousedown',function(e){dragging=true;move(e.clientX);e.preventDefault();});
+ window.addEventListener('mousemove',function(e){if(dragging)move(e.clientX);});
+ window.addEventListener('mouseup',function(){dragging=false;});
+ el.addEventListener('touchstart',function(e){dragging=true;move(e.touches[0].clientX);},{passive:true});
+ el.addEventListener('touchmove',function(e){if(dragging)move(e.touches[0].clientX);},{passive:true});
+ el.addEventListener('touchend',function(){dragging=false;});
+ el.addEventListener('keydown',function(e){
+ if(e.key==='ArrowLeft'){setPct(cur-5);e.preventDefault();}
+ if(e.key==='ArrowRight'){setPct(cur+5);e.preventDefault();}
+ });
+ pick(0);
+})();
+
+// Scroll reveal
+(function(){
+ if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');});return;}
+ var io=new IntersectionObserver(function(entries){
+ entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
+ },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+ document.querySelectorAll('.page:not(#home) .sec-h,.page:not(#home) .about-row-h,.page:not(#home) .ab-how-cols>div').forEach(function(el){el.classList.add('reveal');});
+ function observe(){document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){io.observe(el);});}
+ observe();
+ var _origShow=window.showPage;
+ window.showPage=function(){_origShow.apply(this,arguments);setTimeout(observe,50);};
+})();
+window.addEventListener('pageshow',function(e){if(e.persisted){window.scrollTo(0,0);document.body.scrollTop=0;document.documentElement.scrollTop=0;}});
+</script>
+</body>
+</html>
