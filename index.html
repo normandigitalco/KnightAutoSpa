@@ -13,12 +13,12 @@
 <meta property="og:url" content="https://knightautospa.com/"/>
 <meta property="og:title" content="Knight AutoSpa | Mobile Auto Detailing - Fulshear &amp; Katy, TX"/>
 <meta property="og:description" content="Where your car gets treated like royalty. Paint correction, ceramic coatings, and full details at your door in Fulshear and Katy, TX."/>
-<meta property="og:image" content="https://knightautospa.com/img/knight-og-share.jpg"/>
+<meta property="og:image" content="https://knightautospa.com/img/knight-og-logo.jpg"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:image:alt" content="Knight AutoSpa logo: a gold knight helmet above a black sports car"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://knightautospa.com/img/knight-og-share.jpg"/>
+<meta name="twitter:image" content="https://knightautospa.com/img/knight-og-logo.jpg"/>
 <!-- TODO(Hazel): add real hours to the schema once the client confirms them - left out rather than guessed -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"AutomotiveBusiness","name":"Knight AutoSpa","description":"Mobile auto detailing in Fulshear and Katy, TX. Paint correction, ceramic coatings, and interior and exterior details.","url":"https://knightautospa.com","telephone":"+18326095261","sameAs":["https://www.instagram.com/knight_autospaa/"],"areaServed":[{"@type":"City","name":"Fulshear"},{"@type":"City","name":"Katy"}]}
@@ -393,9 +393,9 @@ footer{background:#0d0b08;border-top:1px solid var(--line);padding:clamp(48px,7v
  .ham{display:flex}
  .nav-call{display:flex}
   /* mobile: the portrait clip runs full-bleed behind the logo + copy */
- .hero{min-height:calc(var(--vh,1vh)*100);align-items:center}
+ .hero{min-height:calc(var(--vh,1vh)*100 + 72px);align-items:center}
  .hero-ov{background:linear-gradient(180deg,rgba(10,9,8,.5) 0%,rgba(10,9,8,.12) 30%,rgba(10,9,8,.5) 60%,rgba(10,9,8,.72) 100%)}
- .hero-content{padding:calc(var(--nav-h) + 6px) var(--pad) calc(var(--nav-h) + 22px)}
+ .hero-content{padding:calc(var(--nav-h) + 6px) var(--pad) calc(var(--nav-h) + 94px)}
  .hero-logo{width:min(clamp(180px,50vw,250px),27vh);margin:0 0 12px}
  .hero-tagline{margin-bottom:12px;font-size:clamp(1.3rem,6.3vw,1.7rem);letter-spacing:.02em}
  .hero-sub{font-size:clamp(10.5px,3.1vw,13px);letter-spacing:.02em;margin-bottom:22px}
@@ -426,11 +426,13 @@ footer{background:#0d0b08;border-top:1px solid var(--line);padding:clamp(48px,7v
  .footer-top{grid-template-columns:1fr}
 }
 /* SCROLL REVEAL */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .55s cubic-bezier(.4,0,.2,1),transform .55s cubic-bezier(.4,0,.2,1)}
+.reveal:not(.visible){will-change:opacity,transform}
+.svc-card.reveal{transition:opacity .55s cubic-bezier(.4,0,.2,1),transform .55s cubic-bezier(.4,0,.2,1),border-color .25s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:.06s}
-.reveal-delay-2{transition-delay:.12s}
-.reveal-delay-3{transition-delay:.18s}
+.reveal-delay-1{transition-delay:.08s}
+.reveal-delay-2{transition-delay:.16s}
+.reveal-delay-3{transition-delay:.24s}
 @media(max-width:880px){.ab-trio img.reveal{transform:none;opacity:1}}
 @media(prefers-reduced-motion:reduce){
  .reveal{transform:none;transition:opacity .3s ease}
